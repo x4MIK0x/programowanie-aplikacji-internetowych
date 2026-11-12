@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadania JavaScript - Pętle</title>
+</head>
+<body>
+
+<h1>Zadania z JavaScript - Pętle</h1>
+
+<script>
+
+// ZADANIE 1
+// 10 kolejnych liczb od 1
+
+document.write("<h3>Zadanie 1</h3>");
+
+for(var i=1; i<=10; i++){
+    document.write(i+' ');
+}
+
+
+// ZADANIE 2
+// 10 liczb od 10 malejąco
+
+document.write("<h3>Zadanie 2</h3>");
+
+for(var i=10; i>=1; i--){
+    document.write(i+' ');
+}
+
+
+// ZADANIE 3
+// Suma 10 kolejnych liczb od 1
+
+document.write("<h3>Zadanie 3</h3>");
+
+var suma = 0;
+
+for(var i=1; i<=10; i++){
+    suma = suma + i;
+}
+
+document.write("Suma: " + suma);
+
+
+// ZADANIE 4
+// 10 kolejnych liczb parzystych
+
+document.write("<h3>Zadanie 4</h3>");
+
+for(var i=2; i<=20; i+=2){
+    document.write(i+' ');
+}
+
+
+// ZADANIE 5
+// Oszczędzanie z odsetkami 8%
+
+document.write("<h3>Zadanie 5</h3>");
+
+var x = parseInt(prompt("Zadanie 5 - Podaj liczbę miesięcy:"));
+var y = parseFloat(prompt("Podaj miesięczną kwotę oszczędności:"));
+
+var suma = 0;
+
+for(var i=1; i<=x; i++){
+    suma = suma + y;
+    suma = suma * 1.08;
+}
+
+document.write("Zgromadzona kwota: " + suma + " zł");
+
+
+// ZADANIE 6
+// Suma ciągu arytmetycznego - 100 elementów
+
+document.write("<h3>Zadanie 6</h3>");
+
+var suma = 0;
+var a = 5;
+
+for(var i=1; i<=100; i++){
+    suma = suma + a;
+    a = a + 10;
+}
+
+document.write("Suma ciągu: " + suma);
+
+
+// ZADANIE 7
+// Ilość cegieł w piramidzie 10 x 10
+
+document.write("<h3>Zadanie 7</h3>");
+
+var suma = 0;
+
+for(var i=1; i<=10; i++){
+    suma = suma + i*i;
+}
+
+document.write("Ilość cegieł: " + suma);
+
+
+// ZADANIE 8
+// Ilość cegieł w ścianie
+
+document.write("<h3>Zadanie 8</h3>");
+
+var x = parseInt(prompt("Podaj liczbę cegieł w pierwszym rzędzie:"));
+var y = parseInt(prompt("Podaj liczbę rzędów:"));
+var z = parseInt(prompt("O ile cegieł krótszy jest kolejny rząd:"));
+
+var suma = 0;
+
+for(var i=1; i<=y; i++){
+    suma = suma + x;
+    x = x - z;
+}
+
+document.write("Ilość cegieł: " + suma);
+
+
+// ZADANIE 9
+// Waga ściany
+
+document.write("<h3>Zadanie 9</h3>");
+
+var x = parseInt(prompt("Podaj liczbę cegieł w pierwszym rzędzie:"));
+var y = parseInt(prompt("Podaj liczbę rzędów:"));
+var z = parseInt(prompt("O ile cegieł krótszy jest kolejny rząd:"));
+var k = parseFloat(prompt("Podaj wagę jednej cegły w kg:"));
+
+var suma = 0;
+
+for(var i=1; i<=y; i++){
+    suma = suma + x;
+    x = x - z;
+}
+
+var waga = suma * k;
+
+document.write("Waga ściany: " + waga + " kg");
+
+
+// ZADANIE 10
+// Prosty kalkulator
+
+document.write("<h3>Zadanie 10</h3>");
+
+var a = parseFloat(prompt("Podaj pierwszą liczbę:"));
+var b = parseFloat(prompt("Podaj drugą liczbę:"));
+
+var znak = prompt("Podaj działanie: +, -, *, /");
+
+if(znak == "+"){
+    document.write("Wynik: " + (a+b));
+}
+else if(znak == "-"){
+    document.write("Wynik: " + (a-b));
+}
+else if(znak == "*"){
+    document.write("Wynik: " + (a*b));
+}
+else if(znak == "/"){
+    document.write("Wynik: " + (a/b));
+}
+else{
+    document.write("Nieprawidłowe działanie");
+}
+
+
+// ZADANIE 11
+// Ciąg arytmetyczny
+
+document.write("<h3>Zadanie 11</h3>");
+
+var n = parseInt(prompt("Podaj liczbę elementów:"));
+var x = parseFloat(prompt("Podaj pierwszy element:"));
+var y = parseFloat(prompt("Podaj różnicę ciągu:"));
+
+for(var i=1; i<=n; i++){
+    document.write(x+' ');
+    x = x + y;
+}
+
+
+// ZADANIE 12
+// Dodawanie aż suma wyniesie 0
+
+document.write("<h3>Zadanie 12</h3>");
+
+var a;
+var b;
+var suma;
+
+while(true){
+    a = parseFloat(prompt("Podaj pierwszą liczbę:"));
+    b = parseFloat(prompt("Podaj drugą liczbę:"));
+
+    suma = a + b;
+
+    document.write("Suma: " + suma + "<br>");
+
+    if(suma == 0){
+        break;
+    }
+}
+
+
+// ZADANIE 13
+// Silnia liczby
+
+document.write("<h3>Zadanie 13</h3>");
+
+var a = parseInt(prompt("Podaj liczbę do obliczenia silni:"));
+var silnia = 1;
+
+for(var i=1; i<=a; i++){
+    silnia = silnia * i;
+}
+
+document.write("Silnia wynosi: " + silnia);
+
+
+// ZADANIE 14
+// Każda kolejna liczba jest kwadratem poprzedniej
+
+document.write("<h3>Zadanie 14</h3>");
+
+var n = parseInt(prompt("Podaj ilość liczb:"));
+var a = parseFloat(prompt("Podaj pierwszą liczbę:"));
+
+for(var i=1; i<=n; i++){
+    document.write(a+' ');
+    a = a * a;
+}
+
+
+// ZADANIE 15
+// Suma i średnia z 10 losowych liczb od 50 do 100
+
+document.write("<h3>Zadanie 15</h3>");
+
+var suma = 0;
+
+for(var i=1; i<=10; i++){
+    var a = Math.floor(Math.random()*51)+50;
+
+    document.write(a+' ');
+
+    suma = suma + a;
+}
+
+var srednia = suma / 10;
+
+document.write("<br>");
+document.write("Suma: " + suma + "<br>");
+document.write("Średnia: " + srednia);
+
+</script>
+
+</body>
+</html>
